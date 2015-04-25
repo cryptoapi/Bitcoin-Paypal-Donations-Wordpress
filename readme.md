@@ -2,7 +2,7 @@
 GoUrl Bitcoin Paypal Donations - Give Addon
 -----------------------------------------------------------
 
-Version 1.0
+Version 1.1.0
 
 **Bitcoin/Altcoin & Paypal Donations on Your Wordpress Website**
 
@@ -13,8 +13,8 @@ Provides a Bitcoin/Altcoin Payment Gateway for [Give 0.8+](https://wordpress.org
 * Plugin Page: [https://gourl.io/bitcoin-donations-wordpress-plugin.html](https://gourl.io/bitcoin-donations-wordpress-plugin.html)
 * Wordpress Page: [https://wordpress.org/plugins/gourl-bitcoin-paypal-donations-give-addon/](https://wordpress.org/plugins/gourl-bitcoin-paypal-donations-give-addon/)
 * Screenshots: [https://gourl.io/bitcoin-donations-wordpress-plugin.html#screenshot](https://gourl.io/bitcoin-donations-wordpress-plugin.html#screenshot)
-* Requires at least: Wordpress 3.5 and Give 0.8
-* Stable Tag: 1.0.0
+* Requires at least: Wordpress 3.5 and Give 0.8.5
+* Stable Tag: 1.1.0
 * License: GNU Version 2 or Any Later Version
 
 
@@ -23,13 +23,13 @@ Wordpress Donation Plugin Features -
 * 100% Free Open Source Plugin on [Github.com](https://github.com/cryptoapi/Bitcoin-Paypal-Donations-Wordpress)
 * Provides Bitcoin/Altcoin Payment Gateway for [Give 0.8 or higher](https://wordpress.org/plugins/give/)
 * Paypal, GoUrl, Authorize.net, Paymill, Stripe payment gateways
-* Accept Bitcoin, Litecoin, Speedcoin, Dogecoin, Paycoin, Darkcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin donations
+* Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin donations
 * Direct Integration on your site, no external payment pages opens
 * Fully customizable plugin, full statistics, easy to use
 * No Chargebacks, Global, Secure. All in automatic mode.
 * [Free Tech Support](https://gourl.io/view/contact/Contact_Us.html) for You
 
-Please note you need to install also - 
+You need to install also - 
 
 * [GoUrl Wordpress Plugin with Payment Gateway](https://wordpress.org/plugins/gourl-bitcoin-payment-gateway-paid-downloads-membership/)
 * [Give Wordpress Donation Plugin](https://wordpress.org/plugins/give/)
@@ -76,4 +76,4 @@ Bitcoin/Altcoin currency directly in donation box
 # ![Bitcoin-Currecncy](https://gourl.io/images/give/screenshot-6.png)
 
 
- 
+   
