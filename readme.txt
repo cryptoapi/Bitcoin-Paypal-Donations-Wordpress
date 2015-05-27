@@ -6,7 +6,7 @@ Author URI: https://gourl.io
 Tags: bitcoin, bitcoins, bitcoin payment, bitcoin payments, gourl, cryptocurrency, btc, coinbase, bitpay, paypal, bitcoin donations, bitcoin donation, charity, churches, crowdfunding, donate, donation, donations, fundraiser, fundraising, gifts, giving, non-profit, nonprofit, paypal, stripe, give, wordpress donations, litecoin, dogecoin, paycoin, reddcoin, speedcoin, dash, potcoin, feathercoin, vertcoin, vericoin, peercoin
 Requires at least: 3.5
 Tested up to: 4.2
-Stable Tag: 1.1.0
+Stable Tag: 1.1.1
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,7 @@ Wordpress Donation Plugin Features -
 * Direct Integration on your site, no external payment pages opens
 * Fully customizable plugin, full statistics, easy to use
 * No Chargebacks, Global, Secure. All in automatic mode
+* If you intend plugin to be used in a language other than English, see the [Language Translations page](https://gourl.io/languages.html)
 * [Free Tech Support](https://gourl.io/view/contact/Contact_Us.html) for You
 
 
@@ -88,12 +89,15 @@ In the search field type "GoUrl Donation" and click Search Plugins. Once you've 
 
 == Changelog ==
 
+= 1.1.1 =
+Localisation - You can easy change/localize any text in plugin
+
 = 1.1.0 =
-Added Peercoin
-Spanish payment box localisation
+* Add Peercoin [PPC] cryptocurrency
+* Add Spanish Payment Box translation
                       
 = 1.0.0 =
 Initial Release
- 
+   
   
  

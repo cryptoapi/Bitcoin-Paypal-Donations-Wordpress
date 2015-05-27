@@ -2,7 +2,7 @@
 GoUrl Bitcoin Paypal Donations - Give Addon
 -----------------------------------------------------------
 
-Version 1.1.0
+Version 1.1.1
 
 **Bitcoin/Altcoin & Paypal Donations on Your Wordpress Website**
 
@@ -14,7 +14,7 @@ Provides a Bitcoin/Altcoin Payment Gateway for [Give 0.8+](https://wordpress.org
 * Wordpress Page: [https://wordpress.org/plugins/gourl-bitcoin-paypal-donations-give-addon/](https://wordpress.org/plugins/gourl-bitcoin-paypal-donations-give-addon/)
 * Screenshots: [https://gourl.io/bitcoin-donations-wordpress-plugin.html#screenshot](https://gourl.io/bitcoin-donations-wordpress-plugin.html#screenshot)
 * Requires at least: Wordpress 3.5 and Give 0.8.5
-* Stable Tag: 1.1.0
+* Stable Tag: 1.1.1
 * License: GNU Version 2 or Any Later Version
 
 
