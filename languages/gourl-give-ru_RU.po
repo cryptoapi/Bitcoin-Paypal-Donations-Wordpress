@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GoUrl Bitcoin Paypal Donations - Give Addon\n"
-"POT-Creation-Date: 2015-05-27 12:00-0000\n"
-"PO-Revision-Date: 2015-05-27 12:00-0000\n"
+"POT-Creation-Date: 2015-07-08 16:21-0000\n"
+"PO-Revision-Date: 2015-07-08 16:21-0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -64,11 +64,11 @@ msgstr "Плагин на Github - 100% открытый исходный код
 #, php-format
 msgid ""
 "Your GoUrl Bitcoin Gateway <a href='%s'>Main Plugin</a> version is too old. "
-"Requires 1.3.2 or higher version. Please <a href='%s'>update</a> to latest "
+"Requires 1.3.3 or higher version. Please <a href='%s'>update</a> to latest "
 "version."
 msgstr ""
 "Версия <a href='%s'>GoUrl главного плагина</a> слишком стара. Требуется "
-"версия 1.3.2 или выше. Пожалуйста, <a href='%s'>обновите</a> до последней "
+"версия 1.3.3 или выше. Пожалуйста, <a href='%s'>обновите</a> до последней "
 "версии."
 
 #: gourl_give.php:213 gourl_give.php:236 gourl_give.php:432 gourl_give.php:437
@@ -350,7 +350,7 @@ msgstr ""
 msgid "%s Donation ID: #%s"
 msgstr "%s Пожертвование ID: #%s"
 
-#: gourl_give.php:532
+#: gourl_give.php:531
 #, php-format
 msgid ""
 "If you like <b>GoUrl Give Bitcoin Gateway</b> please leave us a %s rating on "
@@ -359,15 +359,15 @@ msgstr ""
 "Если вам нравится <b>Биткоин шлюз для Give</b> пожалуйста, оставьте нам "
 "рейтинг %s на %s. Огромное спасибо вам от GoUrl заранее!"
 
-#: gourl_give.php:605
+#: gourl_give.php:604
 msgid "Yes"
 msgstr "Да"
 
-#: gourl_give.php:605
+#: gourl_give.php:604
 msgid "No"
 msgstr "Нет"
 
-#: gourl_give.php:611
+#: gourl_give.php:610
 #, php-format
 msgid ""
 "%s Payment Received <br>%s <br>Payment id <a href='%s'>%s</a> <br>Awaiting "
@@ -376,7 +376,7 @@ msgstr ""
 "%s платеж получен <br>%s <br>Номер платежа <a href='%s'>%s</a> <br>Ожидание "
 "подтверждения сети ..."
 
-#: gourl_give.php:620
+#: gourl_give.php:619
 #, php-format
 msgid "%s Payment id <a href='%s'>%s</a> Confirmed"
 msgstr "%s Платёж с номером <a href='%s'>%s</a> Подтверждён"
