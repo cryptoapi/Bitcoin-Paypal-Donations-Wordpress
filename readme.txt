@@ -5,8 +5,8 @@ Plugin URI: https://gourl.io/bitcoin-donations-wordpress-plugin.html
 Author URI: https://gourl.io 
 Tags: bitcoin, bitcoins, bitcoin payment, bitcoin payments, gourl, cryptocurrency, btc, coinbase, bitpay, paypal, bitcoin donations, bitcoin donation, charity, churches, crowdfunding, donate, donation, donations, fundraiser, fundraising, gifts, giving, non-profit, nonprofit, paypal, stripe, give, wordpress donations, litecoin, dogecoin, darkcoin, dash, speedcoin, vertcoin, reddcoin, feathercoin, vericoin, potcoin, paycoin, monetaryunit, peercoin
 Requires at least: 3.5
-Tested up to: 4.3
-Stable Tag: 1.1.2
+Tested up to: 4.4
+Stable Tag: 1.1.3
 License: GNU Version 2 or Any Later Version
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,9 @@ In the search field type "GoUrl Donation" and click Search Plugins. Once you've 
 
 == Changelog ==
 
+= 1.1.3 =
+Minor updates
+
 = 1.1.2 =
 Add MonetaryUnit [MUE] cryptocurrency
 
@@ -100,7 +103,7 @@ Localisation - You can easy change/localize any text in plugin
 * Add Spanish Payment Box translation
                       
 = 1.0.0 =
-Initial Release
+Initial Release     
     
     
  

@@ -3,7 +3,7 @@
 Plugin Name: 		GoUrl Bitcoin Paypal Donations - Give Addon
 Plugin URI: 		https://gourl.io/bitcoin-donations-wordpress-plugin.html
 Description: 		Bitcoin/Altcoin & Paypal Donations in Wordpress. Provides a Bitcoin/Altcoin Payment Gateway for <a href='https://wordpress.org/plugins/give/'>Give 0.8+</a> - easy to use wordpress donation plugin for accepting bitcoins, altcoins, paypal, authorize.net, stripe, paymill donations directly onto your website.
-Version: 			1.1.2
+Version: 			1.1.3
 Author: 			GoUrl.io
 Author URI: 		https://gourl.io
 License: 			GPLv2
@@ -72,7 +72,8 @@ if (!function_exists('gourl_give_gateway_load'))
 			add_filter( 'give_enabled_payment_gateways', array(&$this, 'give_enabled_payment_gateways') );
 			add_filter( 'give_default_gateway', array(&$this, 'give_default_gateway') );
 			add_filter( 'give_currencies', array(&$this, 'give_currencies') );
-			
+			add_action( 'template_redirect', array(&$this, 'template_redirect'), 1 );
+
 			
 			if (is_admin() && isset($_GET["page"]) && $_GET["page"] == "give-settings" && isset($_GET["tab"]) && $_GET["tab"] == "gateways" && strpos($_SERVER["SCRIPT_NAME"], "edit.php"))
 			{
@@ -383,7 +384,8 @@ if (!function_exists('gourl_give_gateway_load'))
 					'purchase_key'    => $purchase_data['purchase_key'],
 					'currency'        => give_get_currency(),
 					'user_info'       => $purchase_data['user_info'],
-					'status'          => 'pending'
+					'status'          => 'pending',
+					'gateway'         => 'gourl'
 			);
 			// Record the pending payment
 			$payment = give_insert_payment( $payment_data );
@@ -394,8 +396,8 @@ if (!function_exists('gourl_give_gateway_load'))
 				// Add new note
 				$userID = $purchase_data["user_info"]["id"];
 				$user = (!$userID) ? __('Guest', GOURLGV) : "<a href='".admin_url("user-edit.php?user_id=".$userID)."'>user".$userID."</a>";
-				give_insert_payment_note($payment, sprintf(__('Donation created by %s. <br>Awaiting Cryptocurrency Payment ...<br>', GOURLGV), $user));
-				
+				give_insert_payment_note($payment, sprintf(__('Donation created by %s. <br>Awaiting cryptocurrency payment ...<br>', GOURLGV), $user));
+
 				// Empty the shopping cart
 				give_send_to_success_page();
 			} else 
@@ -417,6 +419,8 @@ if (!function_exists('gourl_give_gateway_load'))
 		{
 			global $gourl;
 			
+			if (give_get_payment_gateway( $payment->ID ) != "gourl") return true;
+
 			$orderID		= $payment->ID;
 			$meta 			= give_get_payment_meta( $orderID );
 			$amount 		= give_get_payment_amount( $orderID );
@@ -427,7 +431,7 @@ if (!function_exists('gourl_give_gateway_load'))
 			$language		= $this->deflang;
 			$coin 			= $this->coin_names[$this->defcoin];
 				
-			if (give_get_payment_gateway( $orderID ) != "gourl" || !$amount || !$orderID) 
+			if (!$amount || !$orderID) 
 			{
 				echo '<h4>' . __( 'Information', GOURLGV ) . '</h4>' . PHP_EOL;
 				echo "<div class='give_error'>". sprintf(__( 'The GoUrl Bitcoin Plugin was called to process a donation but could not retrieve the donation details %s. Cannot continue!', GOURLGV ), ($orderID?"#".$orderID:""))."</div>";
@@ -526,6 +530,20 @@ if (!function_exists('gourl_give_gateway_load'))
 		/*
 		 * 11
 		*/
+		public function template_redirect()
+		{
+			global $wp;
+			
+			if (strpos($wp->request, 'donation-confirmation/') === 0 && substr($wp->request, -6) == "/&rl=1") wp_redirect(home_url(add_query_arg(array(), substr($wp->request, 0, -6))));
+			
+			return true;
+		}
+		
+		
+		
+		/*
+		 * 12
+		*/
 		public function admin_footer_text()
 		{
     		return sprintf( __( "If you like <b>GoUrl Give Bitcoin Gateway</b> please leave us a %s rating on %s. A huge thank you from GoUrl in advance!", GOURLGV ), "<a href='https://wordpress.org/support/view/plugin-reviews/gourl-bitcoin-paypal-donations-give-addon?filter=5#postform' target='_blank'>&#9733;&#9733;&#9733;&#9733;&#9733;</a>", "<a href='https://wordpress.org/support/view/plugin-reviews/gourl-bitcoin-paypal-donations-give-addon?filter=5#postform' target='_blank'>WordPress.org</a>");
@@ -607,7 +625,7 @@ if (!function_exists('gourl_give_gateway_load'))
 		// New Payment Received
 		if ($box_status == "cryptobox_newrecord")
 		{
-			give_insert_payment_note($order_id, sprintf(__("%s Payment Received <br>%s <br>Payment id <a href='%s'>%s</a> <br>Awaiting network confirmation...", GOURLGV), $coinName, $amount, GOURL_ADMIN.GOURL."payments&s=payment_".$payID, $payID) . '<br>');
+			give_insert_payment_note($order_id, sprintf(__("%s Payment Received <br>%s. <br>Payment <a href='%s'>id %s</a>. <br>Awaiting network confirmation...", GOURLGV), $coinName, $amount, GOURL_ADMIN.GOURL."payments&s=payment_".$payID, $payID) . '<br>');
 			
 			// Update status to Payment completed 
 			give_update_payment_status( $order_id, 'publish' );
@@ -625,5 +643,5 @@ if (!function_exists('gourl_give_gateway_load'))
 	
 	
 	}
-	// end gourl_give_gateway_load()  
+	// end gourl_give_gateway_load()     
 }
