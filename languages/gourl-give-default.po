@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GoUrl Bitcoin Paypal Donations - Give Addon\n"
-"POT-Creation-Date: 2015-07-15 16:00-0000\n"
-"PO-Revision-Date: 2015-07-15 16:00-0000\n"
+"POT-Creation-Date: 2017-08-04 12:09+0100\n"
+"PO-Revision-Date: 2017-08-04 12:09+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,43 +19,43 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: gourl_give.php:111
+#: gourl_give.php:112
 msgid "Settings"
 msgstr ""
 
-#: gourl_give.php:116
+#: gourl_give.php:117
 msgid "Unrecognised"
 msgstr ""
 
-#: gourl_give.php:118
+#: gourl_give.php:119
 msgid "Donations"
 msgstr ""
 
-#: gourl_give.php:137
+#: gourl_give.php:138
 msgid "Gourl Bitcoin/Altcoin"
 msgstr ""
 
-#: gourl_give.php:184
+#: gourl_give.php:185
 msgid "Cryptocurrency"
 msgstr ""
 
-#: gourl_give.php:187
+#: gourl_give.php:188
 msgid "Bitcoin"
 msgstr ""
 
-#: gourl_give.php:202
+#: gourl_give.php:203
 msgid "GoUrl Bitcoin/Altcoins"
 msgstr ""
 
-#: gourl_give.php:204
+#: gourl_give.php:205
 msgid "Plugin Homepage"
 msgstr ""
 
-#: gourl_give.php:204
+#: gourl_give.php:205
 msgid "screenshots"
 msgstr ""
 
-#: gourl_give.php:205
+#: gourl_give.php:206
 msgid "Plugin on Github - 100% Free Open Source"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgstr ""
 # --------------
 # English - .. <a href='%s'>Main Plugin</a> ..
 # French - .. <a href='%s'>Plugin Principale</a> ..
-#: gourl_give.php:212
+#: gourl_give.php:213
 #, php-format
 msgid ""
 "Your GoUrl Bitcoin Gateway <a href='%s'>Main Plugin</a> version is too old. "
@@ -72,53 +72,53 @@ msgid ""
 "version."
 msgstr ""
 
-#: gourl_give.php:213 gourl_give.php:236 gourl_give.php:432 gourl_give.php:437
-#: gourl_give.php:443 gourl_give.php:460 gourl_give.php:467 gourl_give.php:481
+#: gourl_give.php:214 gourl_give.php:237 gourl_give.php:436 gourl_give.php:441
+#: gourl_give.php:447 gourl_give.php:464 gourl_give.php:471 gourl_give.php:485
 msgid "Information"
 msgstr ""
 
-#: gourl_give.php:213 gourl_give.php:236
+#: gourl_give.php:214 gourl_give.php:237
 msgid "Main Plugin Homepage"
 msgstr ""
 
-#: gourl_give.php:214 gourl_give.php:237
+#: gourl_give.php:215 gourl_give.php:238
 msgid "WordPress.org Plugin Page"
 msgstr ""
 
-#: gourl_give.php:218
+#: gourl_give.php:219
 #, php-format
 msgid ""
 "Your Give version is too old. The GoUrl payment plugin requires Give 0.8.5 "
 "or higher to function. Please update to <a href='%s'>latest version</a>."
 msgstr ""
 
-#: gourl_give.php:230
+#: gourl_give.php:231
 msgid "- Please setup -"
 msgstr ""
 
-#: gourl_give.php:235
+#: gourl_give.php:236
 #, php-format
 msgid ""
 "You need to install GoUrl Bitcoin Gateway Main Plugin also. Go to - <a "
 "href='%s'>Automatic installation</a> or <a href='%s'>Manual</a>."
 msgstr ""
 
-#: gourl_give.php:242
+#: gourl_give.php:243
 msgid "Please install GoUrl Bitcoin Gateway WP Plugin"
 msgstr ""
 
-#: gourl_give.php:246
+#: gourl_give.php:247
 msgid ""
 "Secure donations with virtual currency. <a target='_blank' href='https://"
 "bitcoin.org/'>What is Bitcoin?</a>"
 msgstr ""
 
-#: gourl_give.php:247
+#: gourl_give.php:248
 #, php-format
 msgid "Accept %s donations online in Give."
 msgstr ""
 
-#: gourl_give.php:248
+#: gourl_give.php:249
 #, php-format
 msgid ""
 "If you use multiple websites online, please create separate <a "
@@ -127,15 +127,15 @@ msgid ""
 "Payment Box with the same public/private keys on your different websites."
 msgstr ""
 
-#: gourl_give.php:261
+#: gourl_give.php:262
 msgid "Bitcoin/Altcoins"
 msgstr ""
 
-#: gourl_give.php:262
+#: gourl_give.php:263
 msgid "Secure, anonymous donation with virtual currency"
 msgstr ""
 
-#: gourl_give.php:283
+#: gourl_give.php:284
 msgid "GoUrl default logo - Global Payments"
 msgstr ""
 
@@ -144,36 +144,36 @@ msgstr ""
 # --------------
 # English: %s Payments
 # French: %s de paiements
-#: gourl_give.php:284
+#: gourl_give.php:285
 #, php-format
 msgid "GoUrl logo with text - %s Payments"
 msgstr ""
 
-#: gourl_give.php:288
+#: gourl_give.php:289
 msgid "GoUrl Bitcoin/Altcoin Gateway"
 msgstr ""
 
-#: gourl_give.php:294
+#: gourl_give.php:295
 msgid "GoUrl Bitcoin Gateway"
 msgstr ""
 
-#: gourl_give.php:300
+#: gourl_give.php:301
 msgid "Title"
 msgstr ""
 
-#: gourl_give.php:303
+#: gourl_give.php:304
 msgid "Bitcoin/Altcoin"
 msgstr ""
 
-#: gourl_give.php:304
+#: gourl_give.php:305
 msgid "Donation method title that the customer will see on your checkout"
 msgstr ""
 
-#: gourl_give.php:322
+#: gourl_give.php:323
 msgid "Exchange Rate Multiplier"
 msgstr ""
 
-#: gourl_give.php:326
+#: gourl_give.php:327
 msgid ""
 "The system uses the multiplier rate with today LIVE cryptocurrency exchange "
 "rates (which are updated every 30 minutes) when the transaction is "
@@ -183,85 +183,85 @@ msgid ""
 "bitcoin/altcoins. Default: 1.00 "
 msgstr ""
 
-#: gourl_give.php:329
+#: gourl_give.php:330
 msgid "Donation Box Language"
 msgstr ""
 
-#: gourl_give.php:334
+#: gourl_give.php:335
 msgid "Default Crypto Donation Box Localisation"
 msgstr ""
 
-#: gourl_give.php:337
+#: gourl_give.php:338
 msgid "Donation Box Coin"
 msgstr ""
 
-#: gourl_give.php:342
+#: gourl_give.php:343
 #, php-format
 msgid ""
 "Default Coin in Crypto Donation Box. &#160; Activated Payments : <a "
 "href='%s'>%s</a>"
 msgstr ""
 
-#: gourl_give.php:345
+#: gourl_give.php:346
 msgid "Icons Size"
 msgstr ""
 
-#: gourl_give.php:350
+#: gourl_give.php:351
 msgid ""
 "Cryptocoin icons size in 'Select Payment Method' that the customer will see "
 "on your checkout. Default 60px. Allowed: 30..250px"
 msgstr ""
 
-#: gourl_give.php:351
+#: gourl_give.php:352
 #, php-format
 msgid ""
 "Payment Box <a href='%s'>sizes</a> and border <a href='%s'>shadow</a> you "
 "can change <a href='%s'>here &#187;</a>"
 msgstr ""
 
-#: gourl_give.php:352
+#: gourl_give.php:353
 #, php-format
 msgid ""
 "If you want to use GoUrl Give Bitcoin Gateway plugin in a language other "
 "than English, see the page <a href='%s'>Languages and Translations</a>"
 msgstr ""
 
-#: gourl_give.php:371
+#: gourl_give.php:372
 msgid "Nonce verification has failed"
 msgstr ""
 
-#: gourl_give.php:371
+#: gourl_give.php:372
 msgid "Error"
 msgstr ""
 
-#: gourl_give.php:396
+#: gourl_give.php:398
 msgid "Guest"
 msgstr ""
 
-#: gourl_give.php:397
+#: gourl_give.php:399
 #, php-format
-msgid "Donation created by %s. <br>Awaiting Cryptocurrency Payment ...<br>"
+msgid "Donation created by %s. <br>Awaiting cryptocurrency payment ...<br>"
 msgstr ""
 
-#: gourl_give.php:403
+#: gourl_give.php:405
 msgid "Payment Error"
 msgstr ""
 
-#: gourl_give.php:403
+#: gourl_give.php:405
 #, php-format
 msgid ""
 "Payment creation failed while processing a bitcoin/altcoin donation. "
 "Donation data: %s"
 msgstr ""
 
-#: gourl_give.php:433
+#: gourl_give.php:437
 #, php-format
 msgid ""
 "The GoUrl Bitcoin Plugin was called to process a donation but could not "
 "retrieve the donation details %s. Cannot continue!"
 msgstr ""
 
-#: gourl_give.php:438
+#: gourl_give.php:442
 #, php-format
 msgid ""
 "Please try a different payment method. Admin need to install and activate "
@@ -269,7 +269,7 @@ msgid ""
 "accept Bitcoin/Altcoin Donations online."
 msgstr ""
 
-#: gourl_give.php:444
+#: gourl_give.php:448
 #, php-format
 msgid ""
 "Sorry, but there was an error processing your donation. Please try a "
@@ -277,20 +277,20 @@ msgid ""
 "Plugin not configured / %s not activated)."
 msgstr ""
 
-#: gourl_give.php:462
+#: gourl_give.php:466
 msgid ""
 "You need first to login or register on the website to make Bitcoin/Altcoin "
 "Donation"
 msgstr ""
 
-#: gourl_give.php:468
+#: gourl_give.php:472
 #, php-format
 msgid ""
 "This donation amount is '%s' - it cannot be paid for. Please contact us if "
 "you need assistance."
 msgstr ""
 
-#: gourl_give.php:482
+#: gourl_give.php:486
 #, php-format
 msgid ""
 "Sorry, but there was an error processing your order. Please try later or use "
@@ -298,44 +298,44 @@ msgid ""
 "Google Finance"
 msgstr ""
 
-#: gourl_give.php:498
+#: gourl_give.php:502
 msgid "Donate Now -"
 msgstr ""
 
-#: gourl_give.php:501
+#: gourl_give.php:505
 msgid ""
 "Sorry, but there was an error processing your donation. Please try a "
 "different payment method."
 msgstr ""
 
-#: gourl_give.php:510
+#: gourl_give.php:514
 #, php-format
 msgid "%s Donation ID: #%s"
 msgstr ""
 
-#: gourl_give.php:531
+#: gourl_give.php:549
 #, php-format
 msgid ""
 "If you like <b>GoUrl Give Bitcoin Gateway</b> please leave us a %s rating on "
 "%s. A huge thank you from GoUrl in advance!"
 msgstr ""
 
-#: gourl_give.php:604
+#: gourl_give.php:622
 msgid "Yes"
 msgstr ""
 
-#: gourl_give.php:604
+#: gourl_give.php:622
 msgid "No"
 msgstr ""
 
-#: gourl_give.php:610
+#: gourl_give.php:628
 #, php-format
 msgid ""
-"%s Payment Received <br>%s <br>Payment id <a href='%s'>%s</a> <br>Awaiting "
+"%s Payment Received <br>%s. <br>Payment <a href='%s'>id %s</a>. <br>Awaiting "
 "network confirmation..."
 msgstr ""
 
-#: gourl_give.php:619
+#: gourl_give.php:637
 #, php-format
 msgid "%s Payment id <a href='%s'>%s</a> Confirmed"
 msgstr ""
