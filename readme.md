@@ -2,26 +2,28 @@
 GoUrl Bitcoin Paypal Donations - Give Addon
 -----------------------------------------------------------
 
-Version 1.1.4
+Version 1.1.5
 
 **Bitcoin/Altcoin & Paypal Donations on Your Wordpress Website**
 
-Provides a Bitcoin/Altcoin Payment Gateway for [Give 0.8+](https://wordpress.org/plugins/give/) - easy to use wordpress donation plugin for accepting bitcoins, altcoins, paypal, authorize.net, stripe, paymill donations directly onto your website.
+**IMPORTANT - PLEASE USE MODIFIED VERSION FREE GIVE DONATION PLUGIN WITH BITCOIN SUPPORT. [Download From Github >>>](https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin)**
+
+Provides a Bitcoin/Altcoin Payment Gateway for [Give 2.0.6.x](https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin) - easy to use wordpress donation plugin for accepting bitcoins, altcoins, paypal, authorize.net, stripe, paymill donations directly onto your website.
 
 
 * Author URI: [https://gourl.io](https://gourl.io)
 * Plugin Page: [https://gourl.io/bitcoin-donations-wordpress-plugin.html](https://gourl.io/bitcoin-donations-wordpress-plugin.html)
 * Wordpress Page: [https://wordpress.org/plugins/gourl-bitcoin-paypal-donations-give-addon/](https://wordpress.org/plugins/gourl-bitcoin-paypal-donations-give-addon/)
 * Screenshots: [https://gourl.io/bitcoin-donations-wordpress-plugin.html#screenshot](https://gourl.io/bitcoin-donations-wordpress-plugin.html#screenshot)
-* Requires at least: Wordpress 3.5 and Give 0.8.5
-* Stable Tag: 1.1.4
+* Requires at least: Wordpress 3.5 and Give 2.0.6.x
+* Stable Tag: 1.1.5
 * License: GNU Version 2 or Any Later Version
 
 
 Wordpress Donation Plugin Features -
 
 * 100% Free Open Source Plugin on [Github.com](https://github.com/cryptoapi/Bitcoin-Paypal-Donations-Wordpress)
-* Provides Bitcoin/Altcoin Payment Gateway for [Give 0.8 or higher](https://wordpress.org/plugins/give/)
+* Provides Bitcoin/Altcoin Payment Gateway for [Give 2.0.6.x](https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin)
 * Paypal, GoUrl, Authorize.net, Paymill, Stripe payment gateways
 * Accept Bitcoin, BitcoinCash, Litecoin, Dash, Dogecoin, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Peercoin, MonetaryUnit donations
 * Direct Integration on your site, no external payment pages opens
@@ -32,7 +34,7 @@ Wordpress Donation Plugin Features -
 You need to install also - 
 
 * [GoUrl Wordpress Plugin with Payment Gateway](https://wordpress.org/plugins/gourl-bitcoin-payment-gateway-paid-downloads-membership/)
-* [Give Wordpress Donation Plugin](https://wordpress.org/plugins/give/)
+* [Give Wordpress Donation Plugin](https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin)
 
 
 
@@ -73,6 +75,6 @@ Admin - Bitcoin Gateway Settings
 
 Bitcoin/Altcoin currency directly in donation box
 -----------------
-# ![Bitcoin-Currecncy](https://gourl.io/images/give/screenshot-6.png)      
+# ![Bitcoin-Currecncy](https://gourl.io/images/give/screenshot-6.png)    
 
  

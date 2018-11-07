@@ -2,8 +2,8 @@
 /*
 Plugin Name: 		GoUrl Bitcoin Paypal Donations - Give Addon
 Plugin URI: 		https://gourl.io/bitcoin-donations-wordpress-plugin.html
-Description: 		Bitcoin/Altcoin & Paypal Donations in Wordpress. Provides a Bitcoin/Altcoin Payment Gateway for <a href='https://wordpress.org/plugins/give/'>Give 0.8+</a> - easy to use wordpress donation plugin for accepting bitcoins, altcoins, paypal, authorize.net, stripe, paymill donations directly onto your website.
-Version: 			1.1.4
+Description: 		Bitcoin/Altcoin & Paypal Donations in Wordpress. Provides a Bitcoin/Altcoin Payment Gateway for <a href='https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin'>Give 2.0.6.x</a> - easy to use wordpress donation plugin for accepting bitcoins, altcoins, paypal, authorize.net, stripe, paymill donations directly onto your website.
+Version: 			1.1.5
 Author: 			GoUrl.io
 Author URI: 		https://gourl.io
 License: 			GPLv2
@@ -206,17 +206,19 @@ if (!function_exists('gourl_give_gateway_load'))
 			$this->method_description  .= "<a target='_blank' href='https://github.com/cryptoapi/Bitcoin-Paypal-Donations-Wordpress'>".__( 'Plugin on Github - 100% Free Open Source', GOURLGV )." &#187;</a><br><br>";
 				
 			
+			$give_ver = "";
 			if (class_exists('gourlclass') && defined('GOURL') && defined('GOURL_ADMIN') && is_object($gourl))
 			{
-				if (true === version_compare(GOURL_VERSION, '1.3.3', '<'))
+				if (true === version_compare(GOURL_VERSION, '1.4.14', '<'))
 				{
-					$this->method_description .= '<div class="error"><p><b>' .sprintf(__( "Your GoUrl Bitcoin Gateway <a href='%s'>Main Plugin</a> version is too old. Requires 1.3.3 or higher version. Please <a href='%s'>update</a> to latest version.", GOURLGV ), GOURL_ADMIN.GOURL, $this->mainplugin_url)."</b> &#160; &#160; &#160; &#160; " .
+					$this->method_description .= '<div class="error"><p><b>' .sprintf(__( "Your GoUrl Bitcoin Gateway <a href='%s'>Main Plugin</a> version is too old. Requires 1.4.14 or higher version. Please <a href='%s'>update</a> to latest version.", GOURLGV ), GOURL_ADMIN.GOURL, $this->mainplugin_url)."</b> &#160; &#160; &#160; &#160; " .
 							__( 'Information', GOURLGV ) . ": &#160; <a href='https://gourl.io/bitcoin-wordpress-plugin.html'>".__( 'Main Plugin Homepage', GOURLGV )."</a> &#160; &#160; &#160; " .
 							"<a href='https://wordpress.org/plugins/gourl-bitcoin-payment-gateway-paid-downloads-membership/'>".__( 'WordPress.org Plugin Page', GOURLGV )."</a></p></div>";
 				}
-				elseif (true === version_compare(GIVE_VERSION, '0.8.5', '<'))
+				elseif (true === version_compare(GIVE_VERSION, '2.0.7', '>') || true === version_compare(GIVE_VERSION, '2.0.6', '<') || !(defined('GIVECORE_GOURL')))
 				{
-					$this->method_description .= '<div class="error"><p><b>' .sprintf(__( "Your Give version is too old. The GoUrl payment plugin requires Give 0.8.5 or higher to function. Please update to <a href='%s'>latest version</a>.", GOURLGV ), admin_url('plugin-install.php?tab=search&type=term&s=Give+Democratizing+Generosity')).'</b></p></div>';
+				    $give_ver = '<p><b>' .sprintf(__( "This Give version not support Bitcoin Gateway! You can DELETE current Give plugin and download free Give plugin with Bitcoin Support ver2.0.6.x from <a href='%s'>Github here</a> &#187;", GOURLGV ), "https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin").'</b></p>';
+				    $this->method_description .= '<div class="error">'.$give_ver.'</div>';
 				}
 				else
 				{
@@ -247,6 +249,7 @@ if (!function_exists('gourl_give_gateway_load'))
 			$this->method_description  .= "<b>" . __( "Secure donations with virtual currency. <a target='_blank' href='https://bitcoin.org/'>What is Bitcoin?</a>", GOURLGV ) . '</b><br>';
 			$this->method_description  .= sprintf(__( 'Accept %s donations online in Give.', GOURLGV ), __( ucwords(implode(", ", $this->coin_names)), GOURLGV )).'<br>';
 			$this->method_description .= sprintf(__( "If you use multiple websites online, please create separate <a target='_blank' href='%s'>GoUrl Payment Box</a> (with unique payment box public/private keys) for each of your websites. Do not use the same GoUrl Payment Box with the same public/private keys on your different websites.", GOURLGV ), "https://gourl.io/editrecord/coin_boxes/0");
+			if ($give_ver) $this->method_description .= "<div style='color:red'>".$give_ver."</div>";
 				
 
 			// Re-check
@@ -304,22 +307,7 @@ if (!function_exists('gourl_give_gateway_load'))
 							'default'   => __( 'Bitcoin/Altcoin', GOURLGV ),
 							'desc' 		=> __( 'Donation method title that the customer will see on your checkout', GOURLGV )
 					),
-/* 						array(
-							'name'      => __( 'Description', GOURLGV ),
-							'id'		=> 'gourl_description',
-							'type'      => 'textarea',
-							'default'   => trim(sprintf(__( 'Secure, anonymous donation with virtual currency - %s', GOURLGV ), implode(", ", $this->payments)), " -") . '. ' . __( '<a target="_blank" href="https://bitcoin.org/en/">What is bitcoin?</a>'),
-							'desc' 		=> __( 'Donation method description that the customer will see on your checkout', GOURLGV )
-					),
 					array(
-							'name'      => __( 'Logo', GOURLGV ),
-							'id'		=> 'gourl_logo',
-							'type'      => 'select',
-							'options'  	=> $logos,
-							'default'   => 'bitcoin',
-							'desc' 		=> __( 'Donation logo that the customer will see on your checkout', GOURLGV )
-					),
-*/						array(
 							'name' 		=> __('Exchange Rate Multiplier', GOURLGV ),
 							'id'		=> 'gourl_emultiplier',
 							'type' 		=> 'text',
@@ -349,7 +337,7 @@ if (!function_exists('gourl_give_gateway_load'))
 							'label'     => 'px',
 							'default'   => "60px",
 							'desc' 		=> __( "Cryptocoin icons size in 'Select Payment Method' that the customer will see on your checkout. Default 60px. Allowed: 30..250px", GOURLGV ) . 
-										   '<div style="margin-top:50px;">' . sprintf(__( "Payment Box <a href='%s'>sizes</a> and border <a href='%s'>shadow</a> you can change <a href='%s'>here &#187;</a>", GOURLGV ), plugin_dir_url( __FILE__ )."images/sizes.png", plugin_dir_url( __FILE__ )."images/styles.png", $this->url."#gourlmonetaryunitprivate_key") . '</div>' .
+										   '<div style="margin-top:50px;">' . sprintf(__( "Payment Box <a href='%s'>sizes</a> and border <a href='%s'>shadow</a> you can change <a href='%s'>here &#187;</a>", GOURLGV ), plugin_dir_url( __FILE__ )."images/sizes.png", plugin_dir_url( __FILE__ )."images/styles.png", $this->url) . '</div>' .
 										   '<div style="margin-top:20px;">' . sprintf(__( "If you want to use GoUrl Give Bitcoin Gateway plugin in a language other than English, see the page <a href='%s'>Languages and Translations</a>", GOURLGV ), "https://gourl.io/languages.html") . '</div>'
 					)
 			);
@@ -441,11 +429,20 @@ if (!function_exists('gourl_give_gateway_load'))
 				echo '<h4>' . __( 'Information', GOURLGV ) . '</h4>' . PHP_EOL;
 				echo "<div class='give_error'>".sprintf(__( "Please try a different payment method. Admin need to install and activate wordpress plugin <a href='%s'>GoUrl Bitcoin Gateway for Wordpress</a> to accept Bitcoin/Altcoin Donations online.", GOURLGV ), "https://gourl.io/bitcoin-wordpress-plugin.html")."</div>";
 			}
-			elseif (!$this->payments || !$this->defcoin || true === version_compare(GOURL_VERSION, '1.3.3', '<') ||  
+			elseif (!$this->payments || !$this->defcoin || true === version_compare(GOURL_VERSION, '1.4.14', '<') ||  
 					(array_key_exists($currency, $this->coin_names) && !array_key_exists($currency, $this->payments)))
 			{
 				echo '<h4>' . __( 'Information', GOURLGV ) . '</h4>' . PHP_EOL;
-				echo  "<div class='give_error'>".sprintf(__( 'Sorry, but there was an error processing your donation. Please try a different payment method or contact us if you need assistance (GoUrl Bitcoin Plugin not configured / %s not activated).', GOURLGV ),(!$this->payments || !$this->defcoin || !isset($this->coin_names[$currency])?$this->title:$this->coin_names[$currency]))."</div>";
+				
+				if (true === version_compare(GIVE_VERSION, '2.0.7', '>') || true === version_compare(GIVE_VERSION, '2.0.6', '<') || !(defined('GIVECORE_GOURL')))
+				{
+				    $give_ver = sprintf(__( "This Give version not support Bitcoin Gateway!<br>You can DELETE current Give plugin and <b>download free Give plugin with Bitcoin Support ver2.0.6.x from <a href='%s'>Github here</a> &#187;</b>", GOURLGV ), "https://github.com/cryptoapi/Give-Wordpress-Donations-Bitcoin");
+				    echo  "<div class='give_error'>".$give_ver."</div>";
+				}
+				else 
+				{
+				    echo  "<div class='give_error'>".sprintf(__( 'Sorry, but there was an error processing your donation. Please try a different payment method or contact us if you need assistance (GoUrl Bitcoin Plugin not configured / %s not activated).', GOURLGV ),(!$this->payments || !$this->defcoin || !isset($this->coin_names[$currency])?$this->title:$this->coin_names[$currency]))."</div>";
+				}
 												 
 			}
 			else 
@@ -499,7 +496,15 @@ if (!function_exists('gourl_give_gateway_load'))
 						// crypto payment gateway
 						$result = $gourl->cryptopayments ($plugin, $amount, $currency, $orderID, $period, $language, $coin, $affiliate_key, $userID, $this->iconwidth);
 						
-						if (!$result["is_paid"]) echo '<h4>' . __( 'Donate Now -', GOURLGV ) . '</h4>' . PHP_EOL;
+						if (!$result["is_paid"]) 
+						{
+						    echo  "<script>
+    					           jQuery(document).ready(function() {
+	   				                   jQuery( '.entry-title' ).text('" . __( 'Donate Now -', GOURLGV ) . "');
+					                   jQuery( '.woocommerce-thankyou-order-received, .give_notices, .".CRYPTOBOX_PREFIX_HTMLID."texts_pay_now, .".CRYPTOBOX_PREFIX_HTMLID."header' ).remove();
+					               });
+					           </script>";
+						}
 						else echo "<br>";
 						
 						if ($result["error"]) echo "<div class='give_error'>".__( "Sorry, but there was an error processing your donation. Please try a different payment method.", GOURLGV )."<br/>".$result["error"]."</div>";
@@ -515,6 +520,7 @@ if (!function_exists('gourl_give_gateway_load'))
 								
 								if ($status == "pending" && !isset($_GET["rl"])) header('Location: '.$_SERVER['REQUEST_URI']."&rl=1"); 
 							}
+							
 						}
 					}	
 				}
@@ -619,13 +625,15 @@ if (!function_exists('gourl_give_gateway_load'))
 		$coinName 	= ucfirst($payment_details["coinname"]);
 		$amount		= $payment_details["amount"] . " " . $payment_details["coinlabel"] . "&#160; ( $" . $payment_details["amountusd"] . " )";
 		$payID		= $payment_details["paymentID"];
+		$tx         = $payment_details["tx"];
 		$confirmed	= ($payment_details["is_confirmed"]) ? __('Yes', GOURLGV) : __('No', GOURLGV);
 	
 	
 		// New Payment Received
 		if ($box_status == "cryptobox_newrecord")
 		{
-			give_insert_payment_note($order_id, sprintf(__("%s Payment Received <br>%s. <br>Payment <a href='%s'>id %s</a>. <br>Awaiting network confirmation...", GOURLGV), $coinName, $amount, GOURL_ADMIN.GOURL."payments&s=payment_".$payID, $payID) . '<br>');
+			give_insert_payment_note($order_id, sprintf(__("%s Payment Received <br>%s. <br><a href='%s'>Payment id %s</a>. <br>Awaiting network confirmation...", GOURLGV), $coinName, $amount, GOURL_ADMIN.GOURL."payments&s=payment_".$payID, $payID) . '<br>');
+			give_insert_payment_note($order_id, sprintf(__("%s Transaction ID: %s", GOURLGV), $coinName, $tx));
 			
 			// Update status to Payment completed 
 			give_update_payment_status( $order_id, 'publish' );
@@ -643,5 +651,5 @@ if (!function_exists('gourl_give_gateway_load'))
 	
 	
 	}
-	// end gourl_give_gateway_load()  
+	// end gourl_give_gateway_load()     
 }
